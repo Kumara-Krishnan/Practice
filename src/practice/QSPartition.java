@@ -6,13 +6,12 @@
 package practice;
 
 /**
- * 
- * Partition algorithm for quick sort.
- * Works only for an array with distinct elements.
- * 
- */
-
-/**
+ *
+ * Partition algorithm for quick sort. Works only for an array with distinct
+ * elements.
+ *
+ *
+ *
  *
  * @author kumara krishnan
  */
@@ -22,23 +21,23 @@ public class QSPartition {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        int[] arr = {4,2,1,6,3};
-        int i=1;
+        int[] arr = {3, 8,2,5,1,4,7,6};
+        int i = 1;
         int temp;
         for (int j = 1; j < arr.length; j++) {
             if (arr[j] < arr[0]) {
-                temp=arr[j];
+                temp = arr[j];
                 arr[j] = arr[i];
-                arr[i]=temp;
+                arr[i] = temp;
                 i++;
-            } 
+            }
         }
-        temp=arr[i-1];
-        arr[i-1]=arr[0];
-        arr[0]=temp;
+        temp = arr[i - 1];
+        arr[i - 1] = arr[0];
+        arr[0] = temp;
         for (int k = 0; k < arr.length; k++) {
-            System.out.println(arr[k]);
+            System.out.print(arr[k]+" ");
         }
+        System.out.println();
     }
-
 }
