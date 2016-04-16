@@ -1,5 +1,7 @@
 package practice;
 
+import java.util.Random;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -9,9 +11,7 @@ package practice;
 
 /**
  *
- * Partition algorithm for quick sort. Works only for an array with distinct
- * elements.
- *
+ * Randomized Quick Sort
  *
  *
  *
@@ -32,7 +32,7 @@ public class QuickSort {
     public void quickSort(int[] arr, int p, int r) {
 
         if (p < r) {
-            q = partition(arr, p, r);
+            q = randomizedPartition(arr, p, r);
             //System.out.println("p " + p + " q " + (q - 1));
             //System.out.println("q " + (q + 1) + " r " + r);
             quickSort(arr, q + 1, r);
@@ -40,6 +40,14 @@ public class QuickSort {
         }
     }
 
+    public int randomizedPartition(int [] arr,int p,int r){
+        int t=(int) (Math.random() * (r - p + 1)) + p;
+        int temp=arr[t];
+        arr[t]=arr[p];
+        arr[p]=temp;
+        return partition(arr,p,r);
+    }
+    
     public int partition(int[] arr, int p, int r) {
         int i = p + 1;
         int temp;
