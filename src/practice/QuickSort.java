@@ -7,8 +7,6 @@ import java.util.Random;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
-
 /**
  *
  * Randomized Quick Sort
@@ -40,14 +38,14 @@ public class QuickSort {
         }
     }
 
-    public int randomizedPartition(int [] arr,int p,int r){
-        int t=(int) (Math.random() * (r - p + 1)) + p;
-        int temp=arr[t];
-        arr[t]=arr[p];
-        arr[p]=temp;
-        return partition(arr,p,r);
+    public int randomizedPartition(int[] arr, int p, int r) {
+        int t = (int) (Math.random() * (r - p + 1)) + p;
+        int temp = arr[t];
+        arr[t] = arr[p];
+        arr[p] = temp;
+        return partition(arr, p, r);
     }
-    
+
     public int partition(int[] arr, int p, int r) {
         int i = p + 1;
         int temp;
@@ -70,11 +68,11 @@ public class QuickSort {
         return i - 1;
     }
 
-    static int[] arr = {5,4,3,2,4,5,6,-1,45,-24,5,3,2};
+    static int[] arr = {5, 4, 3, 2, 4, 5, 6, -1, 45, -24, 5, 3, 2};
 
     public static void main(String[] args) {
         QuickSort qs = new QuickSort();
-        qs.quickSort(arr, 0, arr.length-1);
+        qs.quickSort(arr, 0, arr.length - 1);
         qs.printArray(arr);
     }
 }

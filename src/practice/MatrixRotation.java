@@ -101,7 +101,7 @@ public class MatrixRotation {
             } else if (choice == 2) {
                 for (int i = 0; i < tArr1.length; i++) {
                     for (int j = 0; j < tArr1[0].length; j++) {
-                         tArr1[m - 1 - i][n - 1 - j] = arr[i][j];
+                        tArr1[m - 1 - i][n - 1 - j] = arr[i][j];
                     }
                 }
             } else if (choice == 3) {
